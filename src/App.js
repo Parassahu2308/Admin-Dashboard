@@ -2,31 +2,41 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/topbar/Topbar";
 import "./App.css";
 import Home from "./pages/home/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import UserList from "./pages/userList/UserList";
 import User from "./pages/user/User";
-import AddUser from "./pages/addUser/AddUser";
-import ProductList from "./pages/productList/ProductList";
-import Product from "./pages/product/Product";
-import AddProduct from "./pages/addProduct/AddProduct";
+import NewUser from "./pages/newUser/NewUser";
+import Login from "./pages/login/Login";
+import ListList from "./pages/listList/ListList";
+import List from "./pages/list/List";
+import NewList from "./pages/newList/NewList";
+import MovieList from "./pages/movieList/MovieList";
+import { Movie } from "@mui/icons-material";
+import NewMovie from "./pages/newMovie/NewMovie";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Topbar />
+
+      {/* <Route path="/login" element={<Login />} /> */}
+
       <div className="container">
         <Sidebar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/users" element={<UserList />} />
           <Route path="/user/:userId" element={<User />} />
-          <Route path="/newUser" element={<AddUser />} />
-          <Route path="/products" element={<ProductList />} />
-          <Route path="/product/:productId" element={<Product />} />
-          <Route path="/newproduct" element={<AddProduct />} />
+          <Route path="/newUser" element={<NewUser />} />
+          <Route path="/movies" element={<MovieList />} />
+          <Route path="/movie/:movieId" element={<Movie />} />
+          <Route path="/newMovie" element={<NewMovie />} />
+          <Route path="/lists" element={<ListList />} />
+          <Route path="/list/:listId" element={<List />} />
+          <Route path="/newlist" element={<NewList />} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

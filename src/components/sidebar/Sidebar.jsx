@@ -13,8 +13,12 @@ import {
   ChatBubbleOutline,
   WorkOutline,
   Report,
+  PlayCircleOutline,
+  AddToQueue,
+  QueuePlayNext,
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import { List } from "@mui/material";
 
 const Sidebar = () => {
   return (
@@ -48,20 +52,30 @@ const Sidebar = () => {
                 Users
               </li>
             </Link>
-            <Link to="/products" className="link">
+            <Link to="/movies" className="link">
               <li className="sidebarListItem">
-                <Storefront className="sidebarIcon" />
-                Products
+                <PlayCircleOutline className="sidebarIcon" />
+                Movies
               </li>
             </Link>
-            <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
-              Transactions
-            </li>
-            <li className="sidebarListItem">
-              <BarChart className="sidebarIcon" />
-              Reports
-            </li>
+            <Link to="/lists" className="link">
+              <li className="sidebarListItem">
+                <List className="sidebarIcon" />
+                Lists
+              </li>
+            </Link>
+            <Link to="/newMovie" className="link">
+              <li className="sidebarListItem">
+                <AddToQueue className="sidebarIcon" />
+                Add Movie
+              </li>
+            </Link>
+            <Link to="/newList" className="link">
+              <li className="sidebarListItem">
+                <QueuePlayNext className="sidebarIcon" />
+                Add List
+              </li>
+            </Link>
           </ul>
         </div>
         <div className="sidebarMenu">

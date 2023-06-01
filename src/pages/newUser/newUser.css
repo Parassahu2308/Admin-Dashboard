@@ -1,6 +1,5 @@
 .newUser {
     flex: 4;
-    margin-left: 20px;
   }
   
   .newUserForm {
@@ -24,14 +23,14 @@
   }
   
   .newUserItem > input {
-    height: 30px;
+    height: 20px;
     padding: 10px;
     border: 1px solid gray;
     border-radius: 5px;
   }
   
   .newUserGender > input {
-    margin-top: 10px;
+    margin-top: 15px;
   }
   
   .newUserGender>label{
